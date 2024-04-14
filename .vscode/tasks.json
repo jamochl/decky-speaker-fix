@@ -8,6 +8,9 @@
             "type": "shell",
             "group": "none",
             "detail": "Install depedencies for basic setup",
+            "osx": {
+                "command": "${workspaceFolder}/.vscode/setup.sh",
+            },
             "linux": {
                 "command": "${workspaceFolder}/.vscode/setup.sh",
             },
@@ -44,6 +47,9 @@
             "type": "shell",
             "group": "none",
             "detail": "Check that settings.json has been created",
+            "osx": {
+                "command": "${workspaceFolder}/.vscode/config.sh",
+            },
             "linux": {
                 "command": "${workspaceFolder}/.vscode/config.sh",
             },
@@ -58,6 +64,9 @@
             "label": "cli-build",
             "group": "build",
             "detail": "Build plugin with CLI",
+            "osx": {
+                "command": "${workspaceFolder}/.vscode/build.sh",
+            },
             "linux": {
                 "command": "${workspaceFolder}/.vscode/build.sh",
             },

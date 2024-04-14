@@ -53,13 +53,10 @@ if ! test -f "$CLI_INSTALLED"; then
             if [[ "$SYSTEM_ARCH" =~ "Darwin" ]]; then
                 curl -L -o "$(pwd)"/cli/decky "https://github.com/SteamDeckHomebrew/cli/releases/latest/download/decky-macOS-x86_64"
             fi
-
+        elif [[ "$SYSTEM_ARCH" =~ "arm64" ]]; then
+            curl -L -o "$(pwd)"/cli/decky "https://github.com/SteamDeckHomebrew/cli/releases/latest/download/decky-macOS-aarch64"
         else
             echo "System Arch not found! The only supported systems are Linux x86_64 and Apple x86_64/ARM64, not $SYSTEM_ARCH"
-        fi
-
-        if [[ "$SYSTEM_ARCH" =~ "arm64" ]]; then
-            curl -L -o "$(pwd)"/cli/decky "https://github.com/SteamDeckHomebrew/cli/releases/latest/download/decky-macOS-aarch64"
         fi
         
         chmod +x "$(pwd)"/cli/decky
